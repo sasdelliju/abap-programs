@@ -1,0 +1,7 @@
+*names
+  rp_provide_from_last p0002 space pn-begda pn-endda.
+  IF pnp-sw-found = 1.
+    gs_output-name = |{ p0002-midnm }| && | | && |{ p0002-vorna }| && | | && |{ p0002-nachn }|.
+    gs_output-birth_date = |{ p0002-gbdat DATE = USER }|. "dd.mm.yyyy
+    gs_output-gender = p0002-gesch.
+  ENDIF.
