@@ -1,0 +1,19 @@
+
+  CALL FUNCTION 'RH_READ_INFTY'
+    EXPORTING
+      plvar                = '01'
+      otype                = 'S'
+      objid                = p0001-plans
+      infty                = '1000'
+*     SUBTY                = ' '
+      begda                = sy-datum
+      endda                = sy-datum
+    TABLES
+      innnn                = lt_p1000
+    EXCEPTIONS
+      all_infty_with_subty = 1
+      nothing_found        = 2
+      no_objects           = 3
+      wrong_condition      = 4
+      wrong_parameters     = 5
+      OTHERS               = 6. 
