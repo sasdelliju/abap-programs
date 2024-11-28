@@ -1,0 +1,19 @@
+INITIALIZATION.
+
+START-OF-SELECTION.
+
+  DATA: l_name TYPE c LENGTH 10,
+        l_text TYPE string.
+
+  CONCATENATE 'hello World' l_name INTO l_text.
+
+  WRITE: / l_text.
+
+*  l_text = 'Hello'.
+*  l_text = l_name.
+
+  l_text = replace( val = l_text
+                    sub = 'World'
+                    with = 'Fausto' ).
+
+  WRITE: / l_text.
